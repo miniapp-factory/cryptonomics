@@ -44,7 +44,7 @@ export default function MarketsPage() {
         if (!res.ok) {
           throw new Error("Failed to load coins");
         }
-        const data = await res.json();
+        const data: Coin[] = await res.json();
         setCoins(data);
       } catch (err: any) {
         setError(err.message || "Unknown error");

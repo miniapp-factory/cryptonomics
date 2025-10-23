@@ -22,7 +22,7 @@ export default function GlobalMarketOverview() {
         if (!res.ok) {
           throw new Error("Failed to load global stats");
         }
-        const data = await res.json();
+        const data: GlobalStats = await res.json();
         setStats({
           total_market_cap: data.total_market_cap,
           total_volume_24h: data.total_volume_24h,
