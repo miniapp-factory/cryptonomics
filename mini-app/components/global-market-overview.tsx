@@ -29,8 +29,10 @@ export default function GlobalMarketOverview() {
           btc_dominance: data.btc_dominance,
           eth_dominance: data.eth_dominance,
         });
-      } catch (err: any) {
-        setError(err.message || "Unknown error");
+      } catch (err: unknown) {
+        const message =
+          err instanceof Error ? err.message : "Unknown error";
+        setError(message);
       } finally {
         setLoading(false);
       }
