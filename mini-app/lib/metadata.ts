@@ -1,3 +1,4 @@
-export const title = "Mini App Factory App";
-export const description = "This app was created by the Mini App Factory!";
-export const url = process.env.NEXT_PUBLIC_URL;
+export const title = "Crypto Dashboard";
+export const description =
+  "A real‑time cryptocurrency market dashboard with charts, news, and portfolio tracking.";
+export const url = process.env.NEXT_PUBLIC_URL || "http://localhost:3000";
